@@ -24,6 +24,7 @@ public class Main {
                     case 0: PR130mainPersonesHashmap.main(args); break;
                     case 1: PR131hashmap.main(args); break;
                     case 2: PR132persona.main(args); break;
+                    case 3: PR133mainTreballadors.main(args); break;
                     case 100: running = false; break;
                     default: break;
                 }
