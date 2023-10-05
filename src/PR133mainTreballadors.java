@@ -1,7 +1,4 @@
-import javax.swing.*;
 import java.io.File;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,12 +11,14 @@ public class PR133mainTreballadors {
             System.out.println("L'arxiu PR133treballadors no existeix");
         }
 
-        String menu = "1)Introduir ID\n"
-                + "2)Modificar el nom\n"
-                + "3)Modificar el cognom\n"
-                + "4)Modificar el departament\n"
-                + "5)Modificar el salari\n"
-                + "6)Sortir\n";
+        String menu = """
+                1)Introduir ID
+                2)Modificar el nom
+                3)Modificar el cognom
+                4)Modificar el departament
+                5)Modificar el salari
+                6)Sortir
+                """;
 
         int id = -1;
 
@@ -76,8 +75,8 @@ public class PR133mainTreballadors {
         return 0;
     }
 
-    static String[] getColumnValues(List<String> csv, String columnName){
-        return UtilsCSV.getColumnData(csv, columnName);
+    static String[] getColumnValues(List<String> csv){
+        return UtilsCSV.getColumnData(csv, "Id");
     }
 
     static String[] getValue(List<String > csv, int id, String columnName){
@@ -87,7 +86,7 @@ public class PR133mainTreballadors {
             return new String[]{};
         }
 
-        String[] columnData = getColumnValues(csv, "Id");
+        String[] columnData = getColumnValues(csv);
         int row = -1;
 
         for(int i=0;i<columnData.length;i++){
