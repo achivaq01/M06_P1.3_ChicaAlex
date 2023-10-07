@@ -14,6 +14,7 @@ public class Main {
             menu = menu + "\n 1) PR131hashmap";
             menu = menu + "\n 2) PR132persona";
             menu = menu + "\n 3) PR133mainTreballadors";
+            menu = menu + "\n 4) PR134RandomAcces";
             menu = menu + "\n 100) Sortir";
             System.out.println(menu);
 
@@ -25,6 +26,7 @@ public class Main {
                     case 1: PR131hashmap.main(args); break;
                     case 2: PR132persona.main(args); break;
                     case 3: PR133mainTreballadors.main(args); break;
+                    case 4: PR134RandomAcces.main(args); break;
                     case 100: running = false; break;
                     default: break;
                 }
