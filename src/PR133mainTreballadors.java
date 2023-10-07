@@ -29,13 +29,13 @@ public class PR133mainTreballadors {
             int option = getOption(sc);
             List<String> csv = UtilsCSV.read(filePath);
 
-            switch (option){
-                case 1: id = getID(id, sc); break;
-                case 2: modifyValue(csv, id, "Nom", sc, filePath); break;
-                case 3: modifyValue(csv, id, "Cognom", sc, filePath); break;
-                case 4: modifyValue(csv, id, "Departament", sc, filePath); break;
-                case 5: modifyValue(csv, id, "Salari", sc, filePath); break;
-                case 6: sc.close(); running = false; break;
+            switch (option) {
+                case 1 -> id = getID(id, sc);
+                case 2 -> modifyValue(csv, id, "Nom", sc, filePath);
+                case 3 -> modifyValue(csv, id, "Cognom", sc, filePath);
+                case 4 -> modifyValue(csv, id, "Departament", sc, filePath);
+                case 5 -> modifyValue(csv, id, "Salari", sc, filePath);
+                case 6 -> running = false;
             }
 
         }
