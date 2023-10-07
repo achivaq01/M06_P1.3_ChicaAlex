@@ -131,12 +131,7 @@ public class PR134RandomAcces {
     private static void mostrarNota(RandomAccessFile raf, Scanner sc) throws IOException {
         getId(sc, raf);
 
-        raf.seek(getSeekPosition(id));
-
-        raf.readInt();
-        for(int i=0;i<NAME_SIZE;i++){
-            raf.readChar();
-        }
+        raf.seek(getSeekPosition(id) + ID_SIZE + NAME_SIZE * CHAR_SIZE);
         float grade = raf.readFloat();
 
         System.out.println("La nota del alumne amb id " + id + " es " + grade);
